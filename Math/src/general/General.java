@@ -19,10 +19,10 @@ public class General {
 	
 	public static double product(int nStart, int nEnd, PassingFunction aFunction)
 	{
-		if(aFunction == null)
+		if(aFunction == null || nStart > nEnd)
 			throw new IllegalArgumentException();
 		
-		double result = 0.0;
+		double result = 1.0;
 		for(int i = nStart; i <= nEnd; i++)
 		{
 			result *= aFunction.someFunction(i);
